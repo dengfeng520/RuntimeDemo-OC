@@ -24,7 +24,7 @@ static NSString * const ViewControllerCellID = @"ViewControllerCellID";
     [super viewDidLoad];
     
     _listAry = [NSSet setWithObjects:@{@"Class":@"FunctionClass",@"title":@"类方法和实例方法"},
-  @{@"Class":@"",@"title":@"objc_msgSend方法"},
+  @{@"Class":@"msgSendClassController",@"title":@"objc_msgSend方法"},
   @{@"Class":@"",@"title":@"消息发送流程"},
   @{@"Class":@"",@"title":@"类方法动态消息解析"},
   @{@"Class":@"",@"title":@"实例方法动态消息解析"},
