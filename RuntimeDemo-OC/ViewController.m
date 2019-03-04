@@ -80,10 +80,7 @@ static NSString * const ViewControllerCellID = @"ViewControllerCellID";
     UIViewController *view = [[NSClassFromString(Class) alloc]init];
     view.title = [NSString stringWithFormat:@"%@",[[[_listAry allObjects] objectAtIndex:indexPath.row]objectForKey:@"title"]];
     [self.navigationController pushViewController:view animated:YES];
-    
 }
-
-
 
 
 @end

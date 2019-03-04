@@ -30,4 +30,12 @@
     NSLog(@"调用了set方法=============%@",name);
 }
 
++(void)testNameWithString:(NSString *)name{
+    NSLog(@"类方法=============%@",self);
+}
+
+-(void)testLogWithString:(NSString *)name{
+    NSLog(@"实例方法==============%@",self);
+}
+
 @end

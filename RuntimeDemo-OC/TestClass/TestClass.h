@@ -23,6 +23,10 @@ NS_ASSUME_NONNULL_BEGIN
 //
 +(void)testLog:(NSString *)logData;
 
+//
++(void)testNameWithString:(NSString *)name;
+//
+-(void)testLogWithString:(NSString *)name;
 
 @end
 
