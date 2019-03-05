@@ -17,6 +17,7 @@
 		9EEB02D4222D04470021D398 /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EEB02D3222D04470021D398 /* TestClass.m */; };
 		9EEB02D7222D06210021D398 /* FunctionClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EEB02D6222D06210021D398 /* FunctionClass.m */; };
 		9EEB02DD222D3C670021D398 /* msgSendClassController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EEB02DC222D3C670021D398 /* msgSendClassController.m */; };
+		9EEB02E0222E79380021D398 /* SubTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EEB02DF222E79380021D398 /* SubTestClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		9EEB02D6222D06210021D398 /* FunctionClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionClass.m; sourceTree = "<group>"; };
 		9EEB02DB222D3C670021D398 /* msgSendClassController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = msgSendClassController.h; sourceTree = "<group>"; };
 		9EEB02DC222D3C670021D398 /* msgSendClassController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = msgSendClassController.m; sourceTree = "<group>"; };
+		9EEB02DE222E79380021D398 /* SubTestClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubTestClass.h; sourceTree = "<group>"; };
+		9EEB02DF222E79380021D398 /* SubTestClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubTestClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,9 @@
 		9EEB02AC222CC6E80021D398 /* RuntimeDemo-OC */ = {
 			isa = PBXGroup;
 			children = (
+				9EEB02E3222E84050021D398 /* 消息发送流程 */,
+				9EEB02E2222E83E70021D398 /* objc_msgSend */,
+				9EEB02E1222E83CD0021D398 /* 类方法和实例方法 */,
 				9EEB02C7222CC9970021D398 /* TestClass */,
 				9EEB02C3222CC71B0021D398 /* PublicClass */,
 				9EEB02AD222CC6E80021D398 /* AppDelegate.h */,
@@ -99,12 +105,35 @@
 			children = (
 				9EEB02D2222D04470021D398 /* TestClass.h */,
 				9EEB02D3222D04470021D398 /* TestClass.m */,
+				9EEB02DE222E79380021D398 /* SubTestClass.h */,
+				9EEB02DF222E79380021D398 /* SubTestClass.m */,
+			);
+			path = TestClass;
+			sourceTree = "<group>";
+		};
+		9EEB02E1222E83CD0021D398 /* 类方法和实例方法 */ = {
+			isa = PBXGroup;
+			children = (
 				9EEB02D5222D06210021D398 /* FunctionClass.h */,
 				9EEB02D6222D06210021D398 /* FunctionClass.m */,
+			);
+			path = "类方法和实例方法";
+			sourceTree = "<group>";
+		};
+		9EEB02E2222E83E70021D398 /* objc_msgSend */ = {
+			isa = PBXGroup;
+			children = (
 				9EEB02DB222D3C670021D398 /* msgSendClassController.h */,
 				9EEB02DC222D3C670021D398 /* msgSendClassController.m */,
 			);
-			path = TestClass;
+			path = objc_msgSend;
+			sourceTree = "<group>";
+		};
+		9EEB02E3222E84050021D398 /* 消息发送流程 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "消息发送流程";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EEB02D4222D04470021D398 /* TestClass.m in Sources */,
+				9EEB02E0222E79380021D398 /* SubTestClass.m in Sources */,
 				9EEB02B2222CC6E80021D398 /* ViewController.m in Sources */,
 				9EEB02D7222D06210021D398 /* FunctionClass.m in Sources */,
 				9EEB02BD222CC6EB0021D398 /* main.m in Sources */,
@@ -244,7 +274,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -304,7 +334,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

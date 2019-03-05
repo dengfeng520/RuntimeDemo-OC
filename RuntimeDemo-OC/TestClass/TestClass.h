@@ -27,7 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 +(void)testNameWithString:(NSString *)name;
 //
 -(void)testLogWithString:(NSString *)name;
-
+///
+-(void)testLogWithMultipleString:(NSString *)name groupWithString:(NSString *)group;
 @end
 
 NS_ASSUME_NONNULL_END
