@@ -12,16 +12,16 @@
 
 
 
-+(void)testLog:(NSString *)logData{
++(void)testLog{
     //===============================
-    NSLog(@"调用类方法=============%@",logData);
+    NSLog(@"调用类方法=============");
 }
 
 
--(void)testLog:(NSString *)logData{
+-(void)testLog{
     
     //===============================
-    NSLog(@"调用实例方法=============%@",logData);
+    NSLog(@"调用实例方法=============");
 }
 
 -(void)setName:(NSString *)name{

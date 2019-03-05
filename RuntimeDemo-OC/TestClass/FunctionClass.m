@@ -30,6 +30,24 @@
 //    [test testLog:@"test Name"];
 //    test.name = @"test Name";
 //    [TestClass testLog:@"test name"];
+
+    
+    /*
+     * class_getMethodImplementation : 从指定的类方法类表中查找指定的方法，返回此方法的地址
+     * objc_getMetaClass : 获取对象的元类
+     * class_getName : 获取类名
+     */
+    
+    NSString *className = [NSString stringWithFormat:@"%s",class_getName([TestClass class])];
+    NSLog(@"className===============%@",className);
+    //===============================
+    SEL sel = @selector(testLog);
+    IMP imp = class_getMethodImplementation([TestClass class], sel);
+    imp();
+    //===============================
+    SEL testSel = @selector(testLog);
+    IMP testImp = class_getMethodImplementation(objc_getMetaClass(class_getName([TestClass class])), testSel);
+    testImp();
     
     //===============================
 //    TestClass *test = ((TestClass *(*)(id, SEL))(void *)objc_msgSend)((id)((TestClass *(*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("TestClass"), sel_registerName("alloc")), sel_registerName("init"));

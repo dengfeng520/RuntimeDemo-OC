@@ -19,9 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (assign, nonatomic) int sex;
 
 //
--(void)testLog:(NSString *)logData;
+-(void)testLog;
 //
-+(void)testLog:(NSString *)logData;
++(void)testLog;
 
 //
 +(void)testNameWithString:(NSString *)name;
