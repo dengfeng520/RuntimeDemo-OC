@@ -49,6 +49,9 @@
 //    objc_msgSend_fp2ret(test, secondSel, @"test");
     // 给父类发消息
     SubTestClass *subTest = [SubTestClass new];
+    // 子类调用父类方法
+    [subTest testLogWithMultipleString:@"fristtest" groupWithString:@"secondtest"];
+    // 利用objc_msgSendSuper实现子类调用父类方法
     struct objc_super objSuper;
     objSuper.receiver = subTest;
     objSuper.super_class = [TestClass class];
