@@ -18,6 +18,7 @@
 		9EEB02D7222D06210021D398 /* FunctionClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EEB02D6222D06210021D398 /* FunctionClass.m */; };
 		9EEB02DD222D3C670021D398 /* msgSendClassController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EEB02DC222D3C670021D398 /* msgSendClassController.m */; };
 		9EEB02E0222E79380021D398 /* SubTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EEB02DF222E79380021D398 /* SubTestClass.m */; };
+		9EEB02E6222E8B650021D398 /* SendMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EEB02E5222E8B650021D398 /* SendMessageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		9EEB02DC222D3C670021D398 /* msgSendClassController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = msgSendClassController.m; sourceTree = "<group>"; };
 		9EEB02DE222E79380021D398 /* SubTestClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubTestClass.h; sourceTree = "<group>"; };
 		9EEB02DF222E79380021D398 /* SubTestClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubTestClass.m; sourceTree = "<group>"; };
+		9EEB02E4222E8B650021D398 /* SendMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SendMessageViewController.h; sourceTree = "<group>"; };
+		9EEB02E5222E8B650021D398 /* SendMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SendMessageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,8 @@
 		9EEB02E3222E84050021D398 /* 消息发送流程 */ = {
 			isa = PBXGroup;
 			children = (
+				9EEB02E4222E8B650021D398 /* SendMessageViewController.h */,
+				9EEB02E5222E8B650021D398 /* SendMessageViewController.m */,
 			);
 			path = "消息发送流程";
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EEB02E6222E8B650021D398 /* SendMessageViewController.m in Sources */,
 				9EEB02D4222D04470021D398 /* TestClass.m in Sources */,
 				9EEB02E0222E79380021D398 /* SubTestClass.m in Sources */,
 				9EEB02B2222CC6E80021D398 /* ViewController.m in Sources */,
