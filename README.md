@@ -120,8 +120,11 @@ SEL secondSel = @selector(testLogWithMultipleString:groupWithString:);
 objc_msgSend(test, secondSel,@"frist",@"second");
 ```
 也可以将`enable strict checking of obj_msgSend Calls`设置为`NO`，此时Xcode就不会严格检查`obj_msgSend`的类型，就不会报错了。
+
 ![enable strict checking of obj_msgSend Calls](https://upload-images.jianshu.io/upload_images/1214383-d6f1356a1fe8aa60.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 此外还有其他的`objc_msgSend`的函数:
+
+
 | `objc_msgSend_stret` |    `Sends a message with a data-structure return value to an instance of a class.`  | 返回一个结构体|
 | :-------------:|:-------------:| :-------------:| 
 |`objc_msgSend_fpret`|`Sends a message with a floating-point return value to an instance of a class.`|返回一个浮点数|
