@@ -69,7 +69,9 @@ void myselfAnimation(void){
      * class_getName : 获取类名
      */
     
-    /* 如果要调用 IMP 需要把 `Enable Strict Checking of objc_msgSend Calls`设置为YES 才能编译成功，否则会报`Too few arguments to function call, expected at least 2, have 0`的错，具体原因目前未知
+    /*
+     * 如果要调用 IMP 需要把 `Enable Strict Checking of objc_msgSend Calls`设置为YES 才能编译成功，否则会报`Too few
+     * arguments to function call, expected at least 2, have 0`的错，具体原因目前未知
      */
     
     //===============================

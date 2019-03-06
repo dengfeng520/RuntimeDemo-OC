@@ -158,7 +158,21 @@ objc_msgSendSuper(&objSuper, secondSel, @"fristtest", @"secondtest");
 
 ###3、Runtime消息发送流程
 
-当调用一个方法时，`Runtime`机制首先会查询执行的对象是否存在，如果为`nil`，那么程序会直接
+当调用一个方法时，`Runtime`机制是怎么实现的呢,一般的调用一个方法代码如下:
+
+```
+TestClass *test = [[TestClass alloc]init];
+[test testLogWithString:@"消息发送"];
+```
+
+从上面的代码来分析`Runtime`机制的消息发送过程:
+
+* 1、当`test`调用`testLogWithString:`方法时，`Runtime`机制会优先查询`test`的`isa`指针查找所属的类对象(`TestClass`)的方法缓存(cache)列表中是否有`testLogWithString:`方法，如果没有找到进入第2步
+* 2、查找类对象的方法列表中是否有`testLogWithString:`方法；
+* 3、如果在类对象(`TestClass`)中有这个方法，那么就实现该方法；
+* 4、如果在类对象(`TestClass`)中没有找到这个方法，那么`Runtime`机制会去其逐个父类中查找这个方法，如果最终父类`NSObject`中都没有找到这个方法，编译就会报错:`No visible @interface for 'TestClass' declares the selector 'testLogWithString:'`。
+
+整理如下面的流程图所示:
 
 ![消息发送流程图](https://upload-images.jianshu.io/upload_images/1214383-74104277b7a9a55e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
