@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 //
 -(void)testLog;
 //
-+(void)testLog;
++(void)testLogWithClass;
 
 //
 +(void)testNameWithString:(NSString *)name;

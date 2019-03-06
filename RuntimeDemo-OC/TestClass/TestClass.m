@@ -12,7 +12,7 @@
 
 
 
-+(void)testLog{
++(void)testLogWithClass{
     //===============================
     NSLog(@"调用类方法=============testLog");
 }

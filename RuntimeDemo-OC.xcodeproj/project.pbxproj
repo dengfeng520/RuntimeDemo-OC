@@ -19,6 +19,7 @@
 		9EEB02DD222D3C670021D398 /* msgSendClassController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EEB02DC222D3C670021D398 /* msgSendClassController.m */; };
 		9EEB02E0222E79380021D398 /* SubTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EEB02DF222E79380021D398 /* SubTestClass.m */; };
 		9EEB02E6222E8B650021D398 /* SendMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EEB02E5222E8B650021D398 /* SendMessageViewController.m */; };
+		9EEB02E9222F82F40021D398 /* ExploreViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EEB02E8222F82F40021D398 /* ExploreViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		9EEB02DF222E79380021D398 /* SubTestClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubTestClass.m; sourceTree = "<group>"; };
 		9EEB02E4222E8B650021D398 /* SendMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SendMessageViewController.h; sourceTree = "<group>"; };
 		9EEB02E5222E8B650021D398 /* SendMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SendMessageViewController.m; sourceTree = "<group>"; };
+		9EEB02E7222F82F40021D398 /* ExploreViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExploreViewModel.h; sourceTree = "<group>"; };
+		9EEB02E8222F82F40021D398 /* ExploreViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExploreViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				9EEB02D3222D04470021D398 /* TestClass.m */,
 				9EEB02DE222E79380021D398 /* SubTestClass.h */,
 				9EEB02DF222E79380021D398 /* SubTestClass.m */,
+				9EEB02E7222F82F40021D398 /* ExploreViewModel.h */,
+				9EEB02E8222F82F40021D398 /* ExploreViewModel.m */,
 			);
 			path = TestClass;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 				9EEB02D4222D04470021D398 /* TestClass.m in Sources */,
 				9EEB02E0222E79380021D398 /* SubTestClass.m in Sources */,
 				9EEB02B2222CC6E80021D398 /* ViewController.m in Sources */,
+				9EEB02E9222F82F40021D398 /* ExploreViewModel.m in Sources */,
 				9EEB02D7222D06210021D398 /* FunctionClass.m in Sources */,
 				9EEB02BD222CC6EB0021D398 /* main.m in Sources */,
 				9EEB02DD222D3C670021D398 /* msgSendClassController.m in Sources */,
