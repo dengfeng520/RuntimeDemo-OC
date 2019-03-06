@@ -157,6 +157,9 @@ objc_msgSendSuper(&objSuper, secondSel, @"fristtest", @"secondtest");
 ```
 
 ###3、Runtime消息发送流程
+
+当调用一个方法时，`Runtime`机制首先会查询执行的对象是否存在，如果为`nil`，那么程序会直接
+
 ![消息发送流程图](https://upload-images.jianshu.io/upload_images/1214383-74104277b7a9a55e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ---

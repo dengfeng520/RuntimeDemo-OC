@@ -24,7 +24,7 @@
     //===============================
 //    TestClass *test = [[TestClass alloc]init];
     TestClass *test = ((TestClass *(*)(id, SEL))(void *)objc_msgSend)((id)((TestClass *(*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("TestClass"), sel_registerName("alloc")), sel_registerName("init"));
-
+    //===============================
     // 实例方法调用
     [test testLogWithString:@"消息发送"];
     // 类方法调用
@@ -51,13 +51,6 @@
 //    [TestClass performSelector:@selector(testNameWithString:) withObject:@"消息发送"];
 
 
-    
-    /*
-     * class_getMethodImplementation : 从指定的类方法类表中查找指定的方法，返回此方法的地址
-     * objc_getMetaClass : 获取对象的元类
-     * class_getName : 获取类名 
-     */
-
     //=============================== 类方法
     NSString *className = [NSString stringWithFormat:@"%s",class_getName([TestClass class])];
     NSLog(@"className===============%@",className);
@@ -69,6 +62,12 @@
 
 
 void myselfAnimation(void){
+    
+    /*
+     * class_getMethodImplementation : 从指定的类方法类表中查找指定的方法，返回此方法的地址
+     * objc_getMetaClass : 获取对象的元类
+     * class_getName : 获取类名
+     */
     
     /* 如果要调用 IMP 需要把 `Enable Strict Checking of objc_msgSend Calls`设置为YES 才能编译成功，否则会报`Too few arguments to function call, expected at least 2, have 0`的错，具体原因目前未知
      */
