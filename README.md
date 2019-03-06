@@ -93,6 +93,9 @@ testImp();
 **4、类方法里的`self`,是`Class`，这个方法所属的类**
 **5、类方法在元类方法列表中**
 **6、实例方法在实例对象方法列表中**
+
+
+
 ---
 ###2、objc_msgSend方法简单使用
 一般情况下，如果调用一个方法,其本质是利用`objc_msgSend`方法发送一条消息，代码如下：
@@ -108,6 +111,7 @@ objc_msgSend(void /* id self, SEL op, ... */ )
 * `SEL`表示被调用的方法
 * 后面的`...`表示要传的参数，
 ---
+
 ```
 SEL sel = @selector(testLogWithString:);
 objc_msgSend(test, sel, @"test");
@@ -134,7 +138,11 @@ objc_msgSend(test, secondSel,@"frist",@"second");
 |`objc_msgSend_fp2ret`||返回一个浮点数|
 |`objc_msgSendSuper`|`Sends a message with a simple return value to the superclass of an instance of a class.`|给父类发消息|
 |`objc_msgSendSuper_stret`|`Sends a message with a data-structure return value to the superclass of an instance of a class.`|调用父类方法，返回一个结构体|
+
+
 在`objc/message.h`文件中可以看到调用`objc_msgSendSuper`函数时需要传哪些参数，
+
+
 ```
 objc_msgSendSuper(struct objc_super * _Nonnull super, SEL _Nonnull op, ...)
 ```
@@ -163,6 +171,7 @@ objc_msgSendSuper(&objSuper, secondSel, @"fristtest", @"secondtest");
 ###8、转发
 ---
 ###9、模拟多继承
+
 
 此时，需要导入系统提供的`#import <objc/message.h>`
 
