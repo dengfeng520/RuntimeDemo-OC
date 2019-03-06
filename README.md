@@ -82,8 +82,11 @@ SEL testSel = @selector(testLog);
 IMP testImp = class_getMethodImplementation(objc_getMetaClass(class_getName([TestClass class])), testSel);
 testImp();
 ```
+
 运行代码，通过`Log`可以看出这两个方法已经被执行了，通过以上的代码在`TestClass`的实例类或者元类中查找到相关的方法，类方法`testLog`是在`TestClass`元类方法列表中，实例方法`testLog`是在`test`实例方法列表中的。
+
 最后，对实例方法和类方法的调用机制做一个总结:
+
 **1、类对象只能调用类方法**
 **2、实例对象只能调用实例方法**
 **3、实例方法里的`self`，是对象的指针**
