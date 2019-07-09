@@ -12,31 +12,30 @@
 
 
 
-+(void)testLogWithClass{
-    //===============================
++ (void)testLogWithClass {
     NSLog(@"调用类方法=============testLog");
 }
 
--(void)testLog{    
-    //===============================
+
+
+- (void)testLog {
     NSLog(@"调用实例方法=============testLog");
 }
 
--(void)setName:(NSString *)name{
-    //===============================
+- (void)setName:(NSString *)name {
     _name = name;
     NSLog(@"调用了set方法=============%@",name);
 }
 
-+(void)testNameWithString:(NSString *)name{
++ (void)testNameWithString:(NSString *)name {
     NSLog(@"类方法=============%@",self);
 }
 
--(void)testLogWithString:(NSString *)name{
+- (void)testLogWithString:(NSString *)name {
     NSLog(@"实例方法==============%@",self);
 }
 
--(void)testLogWithMultipleString:(NSString *)name groupWithString:(NSString *)group{
+- (void)testLogWithMultipleString:(NSString *)name groupWithString:(NSString *)group {
     
     NSLog(@"多个参数===============%@，%@",name,group);
 }

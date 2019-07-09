@@ -22,7 +22,7 @@
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     
     //===============================
-//    TestClass *test = [[TestClass alloc]init];
+//    TestClass *test = [TestClass new];
     TestClass *test = ((TestClass *(*)(id, SEL))(void *)objc_msgSend)((id)((TestClass *(*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("TestClass"), sel_registerName("alloc")), sel_registerName("init"));
     //===============================
     // 实例方法调用
@@ -33,22 +33,22 @@
     
     //=============================== 测试 反其道而行之，类对象调用实例方法 实例对象调用类方法
 //    [test performSelector:@selector(testNameWithString:) withObject:@"实例对象调用类方法"];
-//    [TestClass performSelector:@selector(testLogWithString:) withObject:@"类对象调用实例方法"];
+    [TestClass performSelector:@selector(testLogWithString:) withObject:@"类对象调用实例方法"];
 
-    
+    //===============================
+    [test performSelector:@selector(testNameWithString:) withObject:@"消息发送"];
+    [TestClass performSelector:@selector(testNameWithString:) withObject:@"消息发送"];
+
     //=============================== 属性赋值
     test.name = @"属性赋值";
     
     //===============================
     // 调用实例方法
-//    ((void (*)(id, SEL, NSString *))(void *)objc_msgSend)((id)test, sel_registerName("testNameWithString:"), (NSString *)@"test Name");
-//    // 调用类方法
-//    ((void (*)(id, SEL, NSString *))(void *)objc_msgSend)((id)objc_getClass("TestClass"), sel_registerName("testNameWithString:"), (NSString *)@"test Name");
-//    // 属性赋值
-//    ((void (*)(id, SEL, NSString *))(void *)objc_msgSend)((id)test, sel_registerName("setName:"), (NSString *)@"test Name");
-//    //===============================
-//    [test performSelector:@selector(testNameWithString:) withObject:@"消息发送"];
-//    [TestClass performSelector:@selector(testNameWithString:) withObject:@"消息发送"];
+    ((void (*)(id, SEL, NSString *))(void *)objc_msgSend)((id)test, sel_registerName("testLogWithString:"), (NSString *)@"test Name");
+    // 调用类方法
+    ((void (*)(id, SEL, NSString *))(void *)objc_msgSend)((id)objc_getClass("TestClass"), sel_registerName("testNameWithString:"), (NSString *)@"test Name");
+    // 属性赋值
+    ((void (*)(id, SEL, NSString *))(void *)objc_msgSend)((id)test, sel_registerName("setName:"), (NSString *)@"test Name");
 
 
     //=============================== 类方法

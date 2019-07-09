@@ -19,16 +19,16 @@ NS_ASSUME_NONNULL_BEGIN
 @property (assign, nonatomic) int sex;
 
 //
--(void)testLog;
+- (void)testLog;
 //
-+(void)testLogWithClass;
++ (void)testLogWithClass;
 
 //
-+(void)testNameWithString:(NSString *)name;
++ (void)testNameWithString:(NSString *)name;
 //
--(void)testLogWithString:(NSString *)name;
+- (void)testLogWithString:(NSString *)name;
 ///
--(void)testLogWithMultipleString:(NSString *)name groupWithString:(NSString *)group;
+- (void)testLogWithMultipleString:(NSString *)name groupWithString:(NSString *)group;
 @end
 
 NS_ASSUME_NONNULL_END

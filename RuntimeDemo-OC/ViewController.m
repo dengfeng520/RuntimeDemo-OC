@@ -24,7 +24,7 @@ static NSString * const ViewControllerCellID = @"ViewControllerCellID";
     [super viewDidLoad];
     
     self.title = @"About Runtime";
-    
+ 
     _listAry = [NSSet setWithObjects:@{@"Class":@"FunctionClass",@"title":@"类方法和实例方法"},
                 @{@"Class":@"msgSendClassController",@"title":@"objc_msgSend方法"},
                 @{@"Class":@"SendMessageViewController",@"title":@"消息发送流程"},
@@ -41,22 +41,22 @@ static NSString * const ViewControllerCellID = @"ViewControllerCellID";
     self.tableView.tableFooterView = footerView;
 }
 
--(NSSet *)listAry{
+- (NSSet *)listAry {
     if(_listAry == nil){
         _listAry = [[NSSet alloc]init];
     }
     return _listAry;
 }
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _listAry.count;
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ViewControllerCellID forIndexPath:indexPath];
     
@@ -70,11 +70,11 @@ static NSString * const ViewControllerCellID = @"ViewControllerCellID";
     return cell;
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 55.f;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     //====================================
